@@ -8,7 +8,10 @@ const StripeCheckoutButton = ({ price }) => {
 
   const onToken = (token) => {
     axios
-      .post('/payment', { amount: priceForStripe, token })
+      .post('https://ks-crwn-clothing-api.herokuapp.com/payment', {
+        amount: priceForStripe,
+        token,
+      })
       .then((response) => alert('Payment Successful'))
       .catch((error) => {
         console.log('Payment error: ', error)
