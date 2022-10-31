@@ -19,6 +19,7 @@ const StripeCheckoutButton = ({ price }) => {
           'There was an issue with your payment. Plase make sure you use the provided credentials'
         )
       })
+    console.log(price, priceForStripe)
   }
 
   return (
