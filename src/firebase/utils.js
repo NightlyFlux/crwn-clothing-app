@@ -3,12 +3,12 @@ import 'firebase/auth'
 import 'firebase/firestore'
 
 const config = {
-  apiKey: 'AIzaSyANgkh9Fn5E-ZyHanc56poUZ7V3Ji2kqR4',
-  authDomain: 'crwn-nightlyflux.firebaseapp.com',
-  projectId: 'crwn-nightlyflux',
-  storageBucket: 'crwn-nightlyflux.appspot.com',
-  messagingSenderId: '335614046325',
-  appId: '1:335614046325:web:55c87b682fd561f3c2083c',
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
 }
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
